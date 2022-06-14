@@ -73,7 +73,7 @@ This will provision YottaDB/Datahub stack and utilise the following global:
     
 The function call **D PROC^meta("yottadb.text_data.test")** will process the META global into a JSON format and then send it to the datahub gms. **yottadb.text_data.test** is the name of the data set as show in data hub.
 
-Address, Age, ID, Name and Sex reference the datahub fields.
+**Address, Age, ID, Name and Sex** reference the datahub fields.
 
 The values for each field are then split into further data using * as a delimiter
 
@@ -93,7 +93,7 @@ To navigate to the Datahub front end, navigate to:
 
 https://gitpodaddress:9002
 
-A new dataset shoul appear exported from YottaDB
+A new dataset should appear, exported from YottaDB
  
     
   
