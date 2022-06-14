@@ -95,6 +95,8 @@ The pieces of the values have the following meaning:
 
 **8th - glossaryTerms**
 
+# Datahub access
+
 
 To navigate to the Datahub front end, navigate to:
 
