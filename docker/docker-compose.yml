@@ -4,7 +4,7 @@
 
 # NOTE: This file does not build! No dockerfiles are set. See the README.md in this directory.
 ---
-version: '3.8'
+version: '2'
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:5.4.0
@@ -33,7 +33,7 @@ services:
   kafka-setup:
     build:
       context: kafka-setup
-    image: linkedin/datahub-kafka-setup:${DATAHUB_VERSION:-head}
+    image: "linkedin/datahub-kafka-setup:${DATAHUB_VERSION:-head}"
     env_file: kafka-setup/env/docker.env
     hostname: kafka-setup
     container_name: kafka-setup
@@ -85,7 +85,7 @@ services:
     build:
       context: ../
       dockerfile: docker/elasticsearch-setup/Dockerfile
-    image: linkedin/datahub-elasticsearch-setup:${DATAHUB_VERSION:-head}
+    image: "linkedin/datahub-elasticsearch-setup:${DATAHUB_VERSION:-head}"
     env_file: elasticsearch-setup/env/docker.env
     hostname: elasticsearch-setup
     container_name: elasticsearch-setup
@@ -96,7 +96,7 @@ services:
     build:
         context: ../
         dockerfile: docker/datahub-gms/Dockerfile
-    image: linkedin/datahub-gms:${DATAHUB_VERSION:-head}
+    image: "linkedin/datahub-gms:${DATAHUB_VERSION:-head}"
     hostname: datahub-gms
     container_name: datahub-gms
     ports:
@@ -111,7 +111,7 @@ services:
     build:
       context: ../
       dockerfile: docker/datahub-frontend/Dockerfile
-    image: linkedin/datahub-frontend-react:${DATAHUB_VERSION:-head}
+    image: "linkedin/datahub-frontend-react:${DATAHUB_VERSION:-head}"
     env_file: datahub-frontend/env/docker.env
     hostname: datahub-frontend-react
     container_name: datahub-frontend-react
@@ -129,6 +129,18 @@ services:
     restart: on-failure:5
     depends_on:
       - datahub-gms
+
+ yottadb:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: yottadb
+   container_name: yottadb
+   networks:
+      - datahub_network
+   mem_limit: 1G
+   volumes:
+      - "$PWD/yottadb:/home/entrypoint"
+   entrypoint: /home/entrypoint/entrypoint.sh
+
 
 networks:
   default:

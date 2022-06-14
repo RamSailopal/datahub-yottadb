@@ -179,6 +179,15 @@ services:
     - 2181:2181
     volumes:
     - zkdata:/var/opt/zookeeper
+  yottadb:
+    image: docker.io/yottadb/yottadb-base:latest
+    hostname: yottadb
+    container_name: yottadb
+    mem_limit: 1G
+    volumes:
+       - "../yottadb:/home/entrypoint"
+    entrypoint: /home/entrypoint/entrypoint.sh
+
 version: '2.3'
 volumes:
   esdata: null
