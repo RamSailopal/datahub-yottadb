@@ -80,12 +80,19 @@ The values for each field are then split into further data using * as a delimite
 The pieces of the values have the following meaning:
 
 1st - JSON Path
+
 2nd  - nullable (1 = true, 0 = false)
+
 3rd - Description
+
 4th - Field Type
+
 5th - Field Type
+
 6th - recursive (1 = true, 0 = false)
+
 7th - globalTags
+
 8th - glossaryTerms
 
 
