@@ -100,6 +100,11 @@ To navigate to the Datahub front end, navigate to:
 
 https://gitpodaddress:9002
 
+Login with:
+
+username: **datahub**
+password: **datahub**
+
 A new dataset should appear, exported from YottaDB
 
 All relevant code/files for YottaDB are stored in the **docker/yottadb** directory of the repo.
