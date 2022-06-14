@@ -50,6 +50,8 @@ HOSTED_DOCS_ONLY-->
 
 # This repo has been forked to demo integration with YottaDB
 
+![Alt text](datahub.JPG?raw=true "Datahub")
+
 To provision:
 
     git clone https://github.com/RamSailopal/datahub-yottadb.git
