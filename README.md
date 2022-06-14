@@ -81,7 +81,7 @@ The values for each field are then split into further data using * as a delimite
 
 The pieces of the values have the following meaning:
 
-**1st - JSON Path
+**1st - JSON Path**
 
 **2nd  - nullable (1 = true, 0 = false)**
 
