@@ -110,7 +110,7 @@ username: **datahub**
 
 password: **datahub**
 
-A new dataset should appear, exported from YottaDB
+Once the docker environment has been provisioned completely and after a further 3 minutes, a new dataset should appear, exported from YottaDB
 
 All relevant code/files for YottaDB are stored in the **docker/yottadb** directory of the repo.
  
