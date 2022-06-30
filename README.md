@@ -73,7 +73,7 @@ This will provision YottaDB/Datahub stack and utilise the following global:
     ^META("yottadb.text_data.test","Name")="*1*Name of patient*StringType*String()*0***"
     ^META("yottadb.text_data.test","Sex")="*1*Sex of patient*StringType*String()*0***"
     
-The function call **D PROC^meta("yottadb.text_data.test")** will process the META global into a JSON format and then send it to the datahub gms. **yottadb.text_data.test** is the name of the data set as show in data hub.
+The function call **D PROC^meta("yottadb.text_data.test")** will process the META global into a JSON format and then send it to the datahub gms. **yottadb.text_data.test** is the name of the data set as shown in data hub.
 
 **Address, Age, ID, Name and Sex** reference the datahub fields.
 
@@ -102,7 +102,7 @@ The pieces of the values have the following meaning:
 
 To navigate to the Datahub front end, navigate to:
 
-https://gitpodaddress:9002
+https://9002-gitpodaddress
 
 Login with:
 
